@@ -1,0 +1,359 @@
+@charset "UTF-8";
+/* COMPASS
+ * ----------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  font-weight: normal;
+  text-align: left;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* BASE
+ * ----------------------------------------------- */
+/* MEDIA QUERIES
+ * ----------------------------------------------- */
+/* ADDITIONAL RESET
+ * ----------------------------------------------- */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body * {
+  max-height: 99999em;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+input,
+label,
+select,
+button,
+textarea {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  line-height: 1;
+  white-space: normal;
+  vertical-align: middle;
+}
+
+input:focus,
+button:focus,
+select:focus {
+  outline: 0;
+}
+
+/* Make webkit render the search input like a normal text field */
+input[type=search] {
+  -webkit-appearance: textfield;
+}
+
+/* Turn off the recent search for webkit. It adds about 15px padding on the left */
+::-webkit-search-decoration {
+  display: none;
+}
+
+/* Turn off scroll bars in IE unless needed */
+textarea {
+  overflow: auto;
+  white-space: pre-line;
+}
+
+/* PRINTING
+ * ----------------------------------------------- */
+@media print {
+
+  @page {
+    margin: 0;
+  }
+  @page :left {
+    margin: 0;
+  }
+  @page :right {
+    margin: 0;
+  }
+  @page :first {
+    margin-top: 0;
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+  }
+
+  html,
+  body {
+    margin: 0;
+  }
+}
+/* GENERAL
+ * ----------------------------------------------- */
+body {
+  color: #000;
+  font-weight: 400;
+  font-size: 12px;
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, Verdana, sans-serif;
+  line-height: 1.4;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+
+.ft-serif {
+  font-family: "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Times New Roman", "游明朝", YuMincho, "メイリオ", Meiryo, Georgia, serif;
+}
+
+/* HELPERS
+ * ----------------------------------------------- */
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.container {
+  min-width: 1200px;
+}
+
+.wrapper {
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* RESPONSIVE
+ * ----------------------------------------------- */
+@media print, (min-width: 768px) {
+  .sm {
+    display: none !important;
+  }
+
+  .trans {
+    opacity: 1;
+    -moz-transition: opacity 0.26s ease;
+    -o-transition: opacity 0.26s ease;
+    -webkit-transition: opacity 0.26s ease;
+    transition: opacity 0.26s ease;
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  }
+  .trans:hover {
+    opacity: 0.8;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .md {
+    display: none !important;
+  }
+
+  html {
+    font-size: calc(100vw / 7.50);
+  }
+
+  body {
+    font-size: 0.24rem;
+  }
+
+  .container {
+    width: auto;
+    min-width: 320px;
+  }
+
+  .wrapper {
+    width: auto;
+    margin: 0;
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
+  }
+}
+/* PARTS
+ * ----------------------------------------------- */
+/* COMMON HEADER
+ * ----------------------------------------------- */
+header .header-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+}
+header .header-menu a {
+  display: inline-block;
+  margin: 10px;
+  padding: 15px;
+  padding: 25px 55px;
+  border-radius: 5px;
+  background: #b6a2de;
+  color: blue;
+  color: #fff;
+  transition: 0.3s;
+}
+header .header-menu a:hover {
+  border-bottom: 2px solid red;
+}
+
+@media print, (min-width: 768px) {
+  header {
+    width: auto;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 767px) {
+  header {
+    width: auto;
+    height: auto;
+  }
+}
+/* COMMON FOOTER
+ * ----------------------------------------------- */
+footer .footer-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+@media print, (min-width: 768px) {
+  footer {
+    width: auto;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 767px) {
+  footer {
+    width: auto;
+    height: auto;
+  }
+}
+/* PAGES
+ * ----------------------------------------------- */
+/* SECTION SAMPLE 01
+ * ----------------------------------------------- */
+.data-table {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+}
+.data-table img {
+  padding: 25px 0;
+}
+.data-table h2 {
+  opacity: 50%;
+  font-size: 30px;
+}
+.data-table p {
+  opacity: 50%;
+}
+.data-table a {
+  color: #977ec5;
+}
+
+@media print, (min-width: 768px) {
+  .section-sample01 {
+    width: 100px;
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .section-sample01 {
+    width: 100px;
+    height: 200px;
+  }
+}
